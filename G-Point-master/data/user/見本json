@@ -1,0 +1,20 @@
+{
+    "userId": "63151",
+    "point": 300,
+    "history": [
+        {
+            "clubId": "100",
+            "point": 50,
+            "timeStamp": "2022-11-03T12:52:30"
+        },
+        {
+            "clubId": "100",
+            "point": 50,
+            "timeStamp": "2022-11-03T12:52:30"
+        }
+    ],
+    "prize": {
+        "item1": true,
+        "item2": false
+    }
+}
