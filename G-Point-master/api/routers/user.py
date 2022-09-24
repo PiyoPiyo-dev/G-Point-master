@@ -14,9 +14,10 @@ async def get_userData(userId:str):
 @router.put("/user/{userId}/update")
 async def put_userData(userId:str):
     pass
-@router.put("/user/visit")
-async def visit():
-    pass
+@router.put("/user/{userId}/visit")
+async def visit(userId:str, visit_data:user_schema.Visit):
+    userModel = getUserModel(userId)
+    return userModel.visit(visit_data.clubId, visit_data.point)
 @router.post("/user/register")
 async def userRegister():
     pass

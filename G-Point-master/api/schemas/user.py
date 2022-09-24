@@ -1,6 +1,6 @@
 
 from typing import Optional
-
+from typing import Union
 from pydantic import BaseModel, Field
 
 
@@ -16,3 +16,6 @@ class History(BaseModel):
     timeStamp: str
 class Item(BaseModel):
     name: str
+class Visit(BaseModel):
+    clubId: str
+    point: Union[int, None] = None
