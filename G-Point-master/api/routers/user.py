@@ -3,6 +3,7 @@ from fastapi import APIRouter
 from typing import List
 import api.schemas.user as user_schema
 from api.classes.user import *
+from api.classes.club import *
 
 router = APIRouter()
 
@@ -17,7 +18,20 @@ async def put_userData(userId:str):
 @router.put("/user/{userId}/visit")
 async def visit(userId:str, visit_data:user_schema.Visit):
     userModel = getUserModel(userId)
-    return userModel.visit(visit_data.clubId, visit_data.point)
+    clubModel = getClubModel(visit_data.clubId)
+    if clubModel.type==0:
+        return userModel.visit(clubModel.clubId, clubModel.point)
+    elif clubModel.type==1:
+        if visit_data.point:
+            return userModel.visit(clubModel.clubId, visit_data.point)
+        else:
+            pass
+    elif clubModel.type==1:
+        if visit_data.point and visit_data.point in clubModel.point:
+            return userModel.visit(clubModel.clubId, visit_data.point)
+        else:
+            pass
+
 @router.post("/user/register")
 async def userRegister():
     pass
