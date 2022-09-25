@@ -26,7 +26,7 @@ async def visit(userId:str, visit_data:user_schema.Visit):
             return userModel.visit(clubModel.clubId, visit_data.point)
         else:
             pass
-    elif clubModel.type==1:
+    elif clubModel.type==2:
         if visit_data.point and visit_data.point in clubModel.point:
             return userModel.visit(clubModel.clubId, visit_data.point)
         else:
