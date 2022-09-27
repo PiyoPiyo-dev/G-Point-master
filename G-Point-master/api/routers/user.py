@@ -1,4 +1,3 @@
-from sqlite3 import Timestamp
 from fastapi import APIRouter
 from typing import List
 import api.schemas.user as user_schema
