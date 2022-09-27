@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "regions": ["hnd1"],
+  "functions": {
+    "main.py": {
+      "memory": 1024,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+	{"src": "/.*", "dest": "main.py" }
+  ]
+}
