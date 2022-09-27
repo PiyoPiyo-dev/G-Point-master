@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from routers import club, user
+from api.routers import club, user
 
 app = FastAPI()
 app.include_router(club.router)
