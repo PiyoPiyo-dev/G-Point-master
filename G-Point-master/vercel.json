@@ -2,12 +2,12 @@
   "version": 2,
   "regions": ["hnd1"],
   "functions": {
-    "main.py": {
+    "api/main.py": {
       "memory": 1024,
       "maxDuration": 10
     }
   },
   "routes": [
-	{"src": "/.*", "dest": "main.py" }
+	{"src": "/.*", "dest": "api/main.py" }
   ]
 }
