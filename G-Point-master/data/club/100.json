@@ -1,1 +1,7 @@
-{"clubId": "100", "description": "テストサークル", "point": [100, 300]}
+{
+    "clubId": "100",
+    "description": "テストサークル",
+    "point": [
+        100
+    ]
+}
